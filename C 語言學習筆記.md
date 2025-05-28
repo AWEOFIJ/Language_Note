@@ -1,5 +1,5 @@
 ---
-title: C 語言學習筆記
+title: C_Programing_Language_Learning_Note
 
 ---
 

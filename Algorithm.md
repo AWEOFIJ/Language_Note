@@ -13,9 +13,10 @@ DFS vs BFS
 - 202506130635457554
 
 > [DAG](https://web.ntnu.edu.tw/~algo/DirectedAcyclicGraph.html)
+
 > [T客幫 演算法](https://ithelp.ithome.com.tw/articles/10281404)
 
-### DAG
+#### Directed Acyclic Graph
 #### Javascript
 ```javascript=
 let N = 10;

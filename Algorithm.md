@@ -1,14 +1,19 @@
 # 演算法
 # Algorithm
 
-演算法
-Algorithm
-深度優先搜尋 DFS vs 廣度優先搜尋 BFS
+####演算法
+
+深度優先搜尋 比對 廣度優先搜尋
+
+Depth First Search vs Breadth First Search
+
+DFS vs BFS
 
 - [time=Wed, May 28, 2025 10:53 AM]
+- 202506130635457554
 
 > [DAG](https://web.ntnu.edu.tw/~algo/DirectedAcyclicGraph.html)
-> [T客幫 演算法 DFS與BFS](https://ithelp.ithome.com.tw/articles/10281404)
+> [T客幫 演算法](https://ithelp.ithome.com.tw/articles/10281404)
 
 ### DAG
 #### Javascript

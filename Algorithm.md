@@ -12,7 +12,7 @@ DFS vs BFS
 - [time=Wed, May 28, 2025 10:53 AM]
 - 202506130635457554
 
-> [DAG](https://web.ntnu.edu.tw/~algo/DirectedAcyclicGraph.html)
+> [Directed_Acyclic_Graph](https://web.ntnu.edu.tw/~algo/DirectedAcyclicGraph.html)
 
 > [T客幫 演算法](https://ithelp.ithome.com.tw/articles/10281404)
 

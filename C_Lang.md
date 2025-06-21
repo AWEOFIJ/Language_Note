@@ -1,20 +1,16 @@
-# C 語言學習筆記 
+# C 語言筆記 
 
-`Note` `2025.02.02`
+`C_Programing_Language_Learning_Note`
 
-C語言學習筆記
-C_Programing_Language_Learning_Note
-02/02/2025
+> LPPL: LaTeX Project Public License
 
-> General Freedom Document License
-- Last Edit Time: [time=Wed, May 28, 2025 11:40 AM]
+- Start Time: 2025.02.02
+- Time Stamp : [time=Sat, Jun 21, 2025 10:31 AM]
 
 ---
 
 **C語言為編譯式語言**
 > C語言是一種通用的、程序式編程，程式語言，支援結構化編程、詞法作用域和遞迴，使用靜態型別系統，並且廣泛用於系統軟體與應用軟體的開發。
-
-<!-- Welcome ! -->
 
 #### 特點:
 - 移植性高: C語言提供前置處理器來處理不同平台之間的問題。
@@ -108,15 +104,21 @@ int main(){
 #### 變數的資料型態
 :::info
 char 字元
+
 int 整數
+
 long 長整數
+
 short 短整數
+
 float 浮點數
+
 double 倍精度浮點數
 :::
 
 :::warning
 sign 有號
+
 unsign 無號
 :::
 
@@ -280,9 +282,10 @@ int main(void)
 | +      | 加法    | 5 + 2 = 7      |     |
 | -      | 減法    | 5 - 2 = 3      |     |
 | *      | 乘法    | 5 * 2 = 10     |     |
-| /      | 除法    | 5 / 2 = 2.5    |     |
+| /      | 除法    | 5 / 2 = 2    |     |
 
-note: `% 算餘數， 5 % 2 = 1 。`
+note: `% 算餘數， 5 % 2 = 1 。` 
+
 note: `C 小數使用 =`
 <!-- note: `十進位小數好像使用 Decimal in C#` -->
 
@@ -307,7 +310,7 @@ END
 ```
 
 note: `C 語言中 typedef 可以用來擴充 C 原有的資料型態`
-- [time=Fri, Feb 21, 2025 9:27 AM]
+- [time=Wed, Jun 4, 2025 6:27 AM]
 
 ---
 
@@ -327,7 +330,9 @@ note: `C 語言中 typedef 可以用來擴充 C 原有的資料型態`
 | num << n | 左移，將num的位元向左移n個位元 |
 | num >> n | 右移，將num的位元項右移n個位元 |
 
-- [time=Thu, Feb 20, 2025 5:54 PM]
+<!-- F(I/O) -->
+
+- [time=Sun, Jun 1, 2025 10:23 AM]
 
 ---
 
@@ -525,7 +530,7 @@ int main(){
 
 ### 數字替換函式 Swap Number
 
-- [Swap number - GDB](https://learn.onlinegdb.com/c_program_to_swap_two_numbers)
+- [Swap number - GDB_Online_Editor](https://learn.onlinegdb.com/c_program_to_swap_two_numbers)
 - [time=Sat, Mar 15, 2025 8:59 AM]
 
 ---
@@ -592,6 +597,14 @@ int main()
 #include<stdlib.h>
 int fib(int);
 
+int fib(int n)
+{
+    if (n < 0 || n > 37) return -1;
+    if (n == 0) return 0;
+    if (n == 1) return 1;
+    return fib(n - 1) + fib(n - 2);
+}
+
 int main()
 {
     printf("fib(6)=%d \n", fib(6));
@@ -599,18 +612,12 @@ int main()
     return 0;
 }
 
-int fib(int n)
-{
-    if (n < 0 || n > 47) return -1;
-    if (n == 0) return 0;
-    if (n == 1) return 1;
-    return fib(n - 1) + fib(n - 2);
-}
-
 /* https://stackoverflow.com/questions/3165293/fibonacci-sequence-in-c */
 ```
+> [fibonacci_stackoverflow](https://stackoverflow.com/questions/3165293/fibonacci-sequence-in-c)
+- [time=Thu, Jun 19, 2025 6:03 AM]
 
-> [stackoverflow](https://stackoverflow.com/questions/3165293/fibonacci-sequence-in-c)
+---
 
 ### 階乘函數(遞迴函數)
 ```c=
@@ -618,21 +625,21 @@ int fib(int n)
 #include<stdlib.h>
 int fac(int);
 
+int fac(int n)
+{
+    if (n > 1) return (n * fac(n - 1));
+    else return 1;
+}
+
 int main()
 {
     printf("fac(6)=%d \n", fac(6));
     /* system("pause"); */
     return 0;
 }
-
-int fac(int n)
-{
-    if (n > 1) return (n * fac(n - 1));
-    else return 1;
-}
 ```
 
-- [time=Fri, Feb 21, 2025 7:50 AM]
+ - [time=Thu, Jun 19, 2025 6:02 AM]
 
 ---
 
@@ -669,12 +676,10 @@ int main()
             {
                 if (arr[j] < arr[j - 1])
                 {
-
                     int w = arr[j];
                     arr[j] = arr[j - 1];
                     arr[j - 1] = w;
-
-                    /* w I call it omega */
+                    /*  */
                 }
                 j++;
             } while (j < i);
@@ -697,7 +702,7 @@ int main()
 }
 ```
 
-- [time=Wed, May 28, 2025 11:32 AM]
+- [time=Tue, Jun 17, 2025 7:43 PM]
 
 ---
 ### Binary Tree
@@ -745,13 +750,10 @@ int main() {
     (*root).right = createNode(3);
     (*(*root).left).left = createNode(4);
     (*(*root).left).right = createNode(5);
-    
-    
+    /*  */
     (*(*root).right).left = createNode(6);
     (*(*root).right).right = createNode(7);
     
-
-    /* Perform in-order traversal */
     printf("In-order Traversal: ");
     inOrderTraversal(root);
     printf("\n");
@@ -761,13 +763,11 @@ int main() {
 
 ```
 
-- [time=Tue, May 20, 2025 10:02 PM]
+- [time=Thu, Jun 19, 2025 6:05 AM]
 
 ---
 
-### 有向無環圖
-
-Directed Acyclic Graph
+### 有向無環圖 Directed Acyclic Graph
 
 ```c=
 #include <stdio.h>
@@ -846,8 +846,7 @@ int main() {
 
 ---
 
-### DAG
-DFS vs BFS
+### DAG (DFS vs BFS)
 
 ```c=
 #include <stdio.h>
@@ -984,46 +983,42 @@ $Latex$
 
 ---
 
-#### 三角函數 Triangle
+#### 黃金比例 Golden Ratio
 
-![三角函數](https://hackmd.io/_uploads/HypBwNExgg.png)
-
-> Trigonometric functions - wiki
-> https://zh.wikipedia.org/zh-tw/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0
+![黃金比例](https://hackmd.io/_uploads/S1SdF5Q4ex.png)
 
 
-$cos \theta = b / h$
-$sin \theta = a / h$
-$tan \theta = a / b$
-$sin \theta ^ 2 + cos \theta ^ 2 = 1$
+$A = \frac{y}{x-\frac{y}{x-\frac{y}{...}}} = \frac{y}{x-A}$
 
-:::info
-cos=
-co-sign
-:::
+$\frac{x}{y} = \frac{y}{x-y} = \phi$
+
+$\phi = \frac{1 + \sqrt{5}}{2}$
+ 
+> [圖解數學](https://www.books.com.tw/products/0010777752?sloc=main)
+
+> [黃金比例 維基百科](https://zh.wikipedia.org/wiki/%E9%BB%84%E9%87%91%E5%88%86%E5%89%B2%E7%8E%87)
+
+- [time=Sat, Jun 21, 2025 10:31 AM]
 
 ---
 
-#### 黃金比例 Golden Ratio
-
-![完美比例](https://hackmd.io/_uploads/S1230MAnkx.png)
-
-<!-- 
-![完美比例](https://hackmd.io/_uploads/SJcujGA2kx.png) 
--->
-
-$$
-\frac{x}{y} = \frac{y}{x-y} = \phi
-$$
-
-$$
-\phi = \frac{1 + \sqrt{5}}{2} = // 
-$$
-
-> [圖解數學](https://www.books.com.tw/products/0010777752?sloc=main)
-> [黃金比例 Wikipedia](https://zh.wikipedia.org/wiki/%E9%BB%84%E9%87%91%E5%88%86%E5%89%B2%E7%8E%87)
+#### 質因數分解
 
 
+$362880 = 0 + 1 \times 2 \times 3 \times 4 \times 5 \times 6 \times 7 \times 8 \times 9$
+
+ - [質因數 維基百科](https://zh.wikipedia.org/zh-tw/%E8%B3%AA%E5%9B%A0%E6%95%B8)
+  - [time=Fri, Jun 20, 2025 6:38 AM]
+
+---
+
+#### 哥德巴赫猜想
+
+$32 = 13 + 19$
+
+ - [歌德巴赫猜想 維基百科](https://zh.wikipedia.org/zh-tw/%E5%93%A5%E5%BE%B7%E5%B7%B4%E8%B5%AB%E7%8C%9C%E6%83%B3)
+
+  - [time=Thu, Jun 19, 2025 5:49 AM]
 ---
 
 #### 泰勒展開式 Taylor Expansion
@@ -1034,13 +1029,40 @@ $$
 
 <!--  -->
 
-$$\sum_{n=0}^{\infty}{\cfrac {f^{(n)}(a)}{n!}}(x-a)^{n}$$
+$\sum_{n=0}^{\infty}{\cfrac {f^{(n)}(a)}{n!}}(x-a)^{n}$
 
-<!--
-![link](https://wikimedia.org/api/rest_v1/media/math/render/svg/f14902f94cdc32418c7d7ee8c81230f72cf099d0)
-- [Taylor Expansion - wiki](https://zh.wikipedia.org/zh-tw/%E6%B3%B0%E5%8B%92%E7%BA%A7%E6%95%B0) 
--->
-- [time=Mon, May 26, 2025 5:42 PM]
+> ...x
+
+- [泰勒展開式 維基百科](https://zh.wikipedia.org/zh-tw/%E6%B3%B0%E5%8B%92%E7%BA%A7%E6%95%B0) 
+
+- [time=Sat, Jun 21, 2025 10:28 AM]
+
+---
+
+#### 三角函數 Triangle
+
+![三角函數](https://hackmd.io/_uploads/HypBwNExgg.png)
+
+$cos \theta = b / h$
+
+$sin \theta = a / h$
+
+$tan \theta = a / b$
+
+$sin \theta ^ 2 + cos \theta ^ 2 = 1$
+
+```c=
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    /*  */
+}
+```
+
+> [三角函數 維基百科](https://zh.wikipedia.org/zh-tw/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0)
+
+ - [time=Thu, Jun 19, 2025 5:49 AM]
 
 ---
 ### Q: 何謂穩固結構
@@ -1049,8 +1071,6 @@ $$\sum_{n=0}^{\infty}{\cfrac {f^{(n)}(a)}{n!}}(x-a)^{n}$$
 What structure would be Solidity ? 
 參考以上圖形，最簡單的起點為三角形，最簡單的回答為圓形。
 ```
-
-mermer 咕噥
 
 ```
 讀過一本書，
@@ -1063,7 +1083,10 @@ mermer 咕噥
 ---
 
 Reference 參考資料：
-> [dag](https://web.ntnu.edu.tw/~algo/DirectedAcyclicGraph.html)
+> [Directed Acyclic Graph](https://web.ntnu.edu.tw/~algo/DirectedAcyclicGraph.html)
+
 > [C語言教學手冊](https://www.books.com.tw/products/0010360466)
+
 > [C語言學習聖經](https://www.books.com.tw/products/0010958702?sloc=main)
+
 > [真確 - 博客來](https://www.books.com.tw/products/E050030362?sloc=main)

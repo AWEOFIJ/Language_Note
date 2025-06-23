@@ -2,10 +2,10 @@
 
 `C_Programing_Language_Learning_Note`
 
-> LPPL: LaTeX Project Public License
+> [Creative Commons License 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
 
 - Start Time: 2025.02.02
-- Time Stamp : [time=Sat, Jun 21, 2025 10:31 AM]
+- Last Update : [time=Mon, Jun 23, 2025 9:08 AM]
 
 ---
 
@@ -23,7 +23,8 @@
 - [C語言 - wiki](https://zh.wikipedia.org/zh-tw/C%E8%AF%AD%E8%A8%80)
 - [time=Sat, Feb 22, 2025 8:33 AM]
 
-#### 開發環境
+### 開發環境
+
 - Dev C++
 - [OnlineGDB](https://www.onlinegdb.com/online_c_compiler)
 
@@ -50,7 +51,7 @@ int main(){
 ```
 ---
 
-### 範例
+#### 範例
 
 ```=c
 #include<stdio.h>
@@ -221,7 +222,7 @@ int main(){
 
 ---
 
-#### 運算子的優先順序
+### 運算子的優先順序
 
 | 優先順序 | 運算子              | 類別 | 結合性 |
 | -------- | ------------------- | ---- | ------ |
@@ -293,27 +294,6 @@ note: `C 小數使用 =`
 
 ---
 
-#### Define 前置處理器
-
-```c=
-#include<stdio.h>
-#define BEGIN {
-#define END }
-
-int main(void)
-BEGIN
-    printf("Hello World !");
-    
-    /* system("pause"); */
-    return 0;
-END
-```
-
-note: `C 語言中 typedef 可以用來擴充 C 原有的資料型態`
-- [time=Wed, Jun 4, 2025 6:27 AM]
-
----
-
 #### 位元邏輯運算子
 
 | 位元邏輯運算子 | 意義 |
@@ -333,6 +313,27 @@ note: `C 語言中 typedef 可以用來擴充 C 原有的資料型態`
 <!-- F(I/O) -->
 
 - [time=Sun, Jun 1, 2025 10:23 AM]
+
+---
+
+#### Define 前置處理器
+
+```c=
+#include<stdio.h>
+#define BEGIN {
+#define END }
+
+int main(void)
+BEGIN
+    printf("Hello World !");
+    
+    /* system("pause"); */
+    return 0;
+END
+```
+
+note: `C 語言中 typedef 可以用來擴充 C 原有的資料型態`
+- [time=Wed, Jun 4, 2025 6:27 AM]
 
 ---
 
@@ -432,7 +433,7 @@ int main()
 
 ---
 
-### 結構變數的使用及初值的設定
+#### 結構變數的使用及初值的設定
 
 ```c=
 #include<stdio.h>
@@ -461,7 +462,7 @@ int main()
 
 ---
 
-### If...Else statement
+#### If...Else statement
 
 ```c=
 #include<stdio.h>
@@ -483,7 +484,7 @@ int main(){
 
 ---
 
-### While loop statement
+#### While loop statement
 
 ```c=
 #include<stdio.h>
@@ -505,7 +506,7 @@ int main(){
 
 ---
 
-### Do While loop statement
+#### Do While loop statement
 
 ```c=
 #include<stdio.h>
@@ -528,14 +529,14 @@ int main(){
 
 ---
 
-### 數字替換函式 Swap Number
+#### 數字替換函式 Swap Number
 
 - [Swap number - GDB_Online_Editor](https://learn.onlinegdb.com/c_program_to_swap_two_numbers)
 - [time=Sat, Mar 15, 2025 8:59 AM]
 
 ---
 
-### 陣列
+#### 陣列
 
 ```c=
 #include <stdio.h>
@@ -557,7 +558,7 @@ int main()
 
 ---
 
-### 處理陣列
+#### 處理陣列
 
 ```c=
 #include <stdio.h>
@@ -588,34 +589,6 @@ int main()
     return 0;
 }
 ```
----
-
-### 費波納契函數(遞迴函數)
-
-```c=
-#include<stdio.h>
-#include<stdlib.h>
-int fib(int);
-
-int fib(int n)
-{
-    if (n < 0 || n > 37) return -1;
-    if (n == 0) return 0;
-    if (n == 1) return 1;
-    return fib(n - 1) + fib(n - 2);
-}
-
-int main()
-{
-    printf("fib(6)=%d \n", fib(6));
-    system("pause");
-    return 0;
-}
-
-/* https://stackoverflow.com/questions/3165293/fibonacci-sequence-in-c */
-```
-> [fibonacci_stackoverflow](https://stackoverflow.com/questions/3165293/fibonacci-sequence-in-c)
-- [time=Thu, Jun 19, 2025 6:03 AM]
 
 ---
 
@@ -633,7 +606,7 @@ int fac(int n)
 
 int main()
 {
-    printf("fac(6)=%d \n", fac(6));
+    printf("fac(4)=%d \n", fac(4));
     /* system("pause"); */
     return 0;
 }
@@ -643,131 +616,36 @@ int main()
 
 ---
 
-### 泡泡排序法 Bubble Sort
+#### 費波納契函數(遞迴函數)
+
 ```c=
-#include <stdio.h>
-#include <stdlib.h>
+#include<stdio.h>
+#include<stdlib.h>
+int fib(int);
+
+int fib(int n)
+{
+    if (n < 0 || n > 37) return -1;
+    if (n == 0) return 0;
+    if (n == 1) return 1;
+    return fib(n - 1) + fib(n - 2);
+}
 
 int main()
 {
-    int arrSize = 10; /* 陣列長度 */
-
-    int arr[10] = {3, 4, 0, 1, 2, 5, 6, 9, 7, 8}; /* 宣告陣列  */
-    size_t arr_n = sizeof(arr) / sizeof(arr[0]);
-
-    printf("arr 陣列的長度arr_n=%lu \n", arr_n);
-    printf("arr 陣列的長度值arr_n位元=%lu \n", sizeof(arr_n));
-    printf("arr--- \n");
-
-    int i = 0;
-    for (i = 0; i < arrSize; i++)
-    {
-        printf("%d \t", arr[i]);
-    }
-
-    i = arr_n;
-
-    do
-    {
-        if (i > 0)
-        {
-            int j = 0;
-            do
-            {
-                if (arr[j] < arr[j - 1])
-                {
-                    int w = arr[j];
-                    arr[j] = arr[j - 1];
-                    arr[j - 1] = w;
-                    /*  */
-                }
-                j++;
-            } while (j < i);
-            i--;
-            if (i == 0)
-                break;
-        }
-    } while (i < arr_n);
-
-    printf("\n");
-    printf("arr--- \n");
-
-    i = 0;
-    for (i = 0; i < arrSize; i++)
-    {
-        printf("%d \t", arr[i]);
-    }
-
-    return 0;
-}
-```
-
-- [time=Tue, Jun 17, 2025 7:43 PM]
-
----
-### Binary Tree
-
-```c=
-#include <stdio.h>
-#include <stdlib.h>
-
-/* Define the structure of a node in the binary tree */
-struct Node {
-    int data;
-    struct Node *left;
-    struct Node *right;
-};
-
-/* Function to create a new node */
-struct Node* createNode(int data) {
-    struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
-    (*newNode).data = data;
-    (*newNode).left = NULL;
-    (*newNode).right = NULL;
-    return newNode;
-}
-
-void modifyNode(struct Node* node, int newData) {
-    if (node != NULL) {
-        (*node).data = newData;
-    }
-}
-
-
-/* Function to perform in-order traversal */
-void inOrderTraversal(struct Node *root) {
-    if (root != NULL) {
-        inOrderTraversal((*root).left);
-        printf("%d ", (*root).data);
-        inOrderTraversal((*root).right);
-    }
-}
-
-int main() {
-    /* Create nodes */
-    struct Node *root = createNode(1);
-    (*root).left = createNode(2);
-    (*root).right = createNode(3);
-    (*(*root).left).left = createNode(4);
-    (*(*root).left).right = createNode(5);
-    /*  */
-    (*(*root).right).left = createNode(6);
-    (*(*root).right).right = createNode(7);
-    
-    printf("In-order Traversal: ");
-    inOrderTraversal(root);
-    printf("\n");
-
+    printf("fib(6)=%d \n", fib(4));
+    system("pause");
     return 0;
 }
 
+/* https://stackoverflow.com/questions/3165293/fibonacci-sequence-in-c */
 ```
-
-- [time=Thu, Jun 19, 2025 6:05 AM]
+> [fibonacci_stackoverflow](https://stackoverflow.com/questions/3165293/fibonacci-sequence-in-c)
+- [time=Thu, Jun 19, 2025 6:03 AM]
 
 ---
 
-### 有向無環圖 Directed Acyclic Graph
+#### 有向無環圖 Directed Acyclic Graph
 
 ```c=
 #include <stdio.h>
@@ -846,7 +724,7 @@ int main() {
 
 ---
 
-### DAG (DFS vs BFS)
+#### DAG (DFS vs BFS)
 
 ```c=
 #include <stdio.h>
@@ -969,6 +847,211 @@ int main() {
 
 - [time=Thu, May 8, 2025 8:23 AM]
 
+
+---
+
+#### 泡泡排序法 Bubble Sort
+
+```c=
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int arrSize = 10; /* 陣列長度 */
+
+    int arr[10] = {3, 4, 0, 1, 2, 5, 6, 9, 7, 8}; /* 宣告陣列  */
+    size_t arr_n = sizeof(arr) / sizeof(arr[0]);
+
+    printf("arr 陣列的長度arr_n=%lu \n", arr_n);
+    printf("arr 陣列的長度值arr_n位元=%lu \n", sizeof(arr_n));
+    printf("arr--- \n");
+
+    int i = 0;
+    for (i = 0; i < arrSize; i++)
+    {
+        printf("%d \t", arr[i]);
+    }
+
+    i = arr_n;
+
+    do
+    {
+        if (i > 0)
+        {
+            int j = 1;
+            do
+            {
+                if (arr[j] < arr[j - 1])
+                {
+                    int w = arr[j];
+                    arr[j] = arr[j - 1];
+                    arr[j - 1] = w;
+                    
+                    /*  */
+                }
+                j++;
+            } while (j < i);
+            i--;
+            if (i == 0)
+                break;
+        }
+    } while (i < arr_n);
+
+    printf("\n");
+    printf("arr--- \n");
+
+    i = 0;
+    for (i = 0; i < arrSize; i++)
+    {
+        printf("%d \t", arr[i]);
+    }
+
+    return 0;
+}
+```
+
+- [time=Sun, Jun 22, 2025 12:48 PM]
+
+---
+
+#### 二分搜尋法
+
+```c=
+#include <stdio.h>
+#include <stdlib.h>
+
+// 泡泡排序法
+void bubbleSort(int arr[], int size) {
+    for (int i = 0; i < size - 1; i++) {
+        for (int j = 0; j < size - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // 交換 arr[j] 和 arr[j+1]
+                int w = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = w;
+                
+                /*  */
+            }
+        }
+    }
+}
+
+// 二分搜尋法
+int binarySearch(int arr[], int size, int target) {
+    int left = 0;
+    int right = size - 1;
+
+    while (left <= right) {
+        int mid = (left + right) / 2;
+
+        if (arr[mid] == target) {
+            return mid; // 找到目標
+        } else if (arr[mid] < target) {
+            left = mid + 1; // 往右邊找
+        } else {
+            right = mid - 1; // 往左邊找
+        }
+    }
+
+    return -1; // 沒找到
+}
+
+int main() {
+    // 未排序的陣列
+    int arr[] = {5, 2, 9, 1, 7, 6, 3, 8, 0, 4};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int target = 4; // 要查找的目標值
+
+    printf("原始陣列：\n");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    // 排序陣列
+    bubbleSort(arr, size);
+
+    printf("排序後的陣列：\n");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    // 查找目標值
+    int result = binarySearch(arr, size, target);
+    if (result != -1) {
+        printf("找到數值 %d 在索引位置 %d。\n", target, result);
+    } else {
+        printf("找不到數值 %d。\n", target);
+    }
+
+    return 0;
+}
+```
+
+- [time=Sun, Jun 22, 2025 12:49 PM]
+
+---
+#### Binary Tree
+
+```c=
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Define the structure of a node in the binary tree */
+struct Node {
+    int data;
+    struct Node *left;
+    struct Node *right;
+};
+
+/* Function to create a new node */
+struct Node* createNode(int data) {
+    struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
+    (*newNode).data = data;
+    (*newNode).left = NULL;
+    (*newNode).right = NULL;
+    return newNode;
+}
+
+void modifyNode(struct Node* node, int newData) {
+    if (node != NULL) {
+        (*node).data = newData;
+    }
+}
+
+
+/* Function to perform in-order traversal */
+void inOrderTraversal(struct Node *root) {
+    if (root != NULL) {
+        inOrderTraversal((*root).left);
+        printf("%d ", (*root).data);
+        inOrderTraversal((*root).right);
+    }
+}
+
+int main() {
+    /* Create nodes */
+    struct Node *root = createNode(1);
+    (*root).left = createNode(2);
+    (*root).right = createNode(3);
+    (*(*root).left).left = createNode(4);
+    (*(*root).left).right = createNode(5);
+    /*  */
+    (*(*root).right).left = createNode(6);
+    (*(*root).right).right = createNode(7);
+    
+    printf("In-order Traversal: ");
+    inOrderTraversal(root);
+    printf("\n");
+
+    return 0;
+}
+```
+
+- [time=Thu, Jun 19, 2025 6:05 AM]
+
 ---
 
 ### 數學 Math
@@ -998,7 +1081,7 @@ $\phi = \frac{1 + \sqrt{5}}{2}$
 
 > [黃金比例 維基百科](https://zh.wikipedia.org/wiki/%E9%BB%84%E9%87%91%E5%88%86%E5%89%B2%E7%8E%87)
 
-- [time=Sat, Jun 21, 2025 10:31 AM]
+- [time=Mon, Jun 23, 2025 9:07 AM]
 
 ---
 
@@ -1007,8 +1090,10 @@ $\phi = \frac{1 + \sqrt{5}}{2}$
 
 $362880 = 0 + 1 \times 2 \times 3 \times 4 \times 5 \times 6 \times 7 \times 8 \times 9$
 
+$707281 = 0 + 841 \times 841 = 29^{4}$
+
  - [質因數 維基百科](https://zh.wikipedia.org/zh-tw/%E8%B3%AA%E5%9B%A0%E6%95%B8)
-  - [time=Fri, Jun 20, 2025 6:38 AM]
+  - [time=Mon, Jun 23, 2025 9:07 AM]
 
 ---
 
@@ -1065,7 +1150,7 @@ int main(){
  - [time=Thu, Jun 19, 2025 5:49 AM]
 
 ---
-### Q: 何謂穩固結構
+#### Q: 何謂穩固結構
 
 ```
 What structure would be Solidity ? 
@@ -1074,15 +1159,14 @@ What structure would be Solidity ?
 
 ```
 讀過一本書，
-書名為真確，
-其實_人的生活_簡單的方式為_。
+書名為真確。
 ```
 
 - [name=EIT-]
 
 ---
 
-Reference 參考資料：
+#### Reference 參考資料：
 > [Directed Acyclic Graph](https://web.ntnu.edu.tw/~algo/DirectedAcyclicGraph.html)
 
 > [C語言教學手冊](https://www.books.com.tw/products/0010360466)

@@ -1,22 +1,14 @@
 # 演算法
 # Algorithm
 
-####演算法
+演算法
+Algorithm
+深度優先搜尋 vs 廣度優先搜尋
 
-深度優先搜尋 比對 廣度優先搜尋
+- Start time: 2025.05.25
+- Last Update: [time=Sun, Jun 29, 2025 7:14 AM]
 
-Depth First Search vs Breadth First Search
-
-DFS vs BFS
-
-- [time=Wed, May 28, 2025 10:53 AM]
-- 202506130635457554
-
-> [Directed_Acyclic_Graph](https://web.ntnu.edu.tw/~algo/DirectedAcyclicGraph.html)
-
-> [T客幫 演算法](https://ithelp.ithome.com.tw/articles/10281404)
-
-#### Directed Acyclic Graph
+### DAG
 #### Javascript
 ```javascript=
 let N = 10;
@@ -293,4 +285,23 @@ while (i < N){
 graph.printGraph();  /* yet complete */
 ```
 
-- [time=Sat, May 10, 2025 5:34 PM]
+- [name=Copilot]
+- [time=Sun, Jun 29, 2025 5:55 AM]
+
+
+#### 
+
+```
+以上筆記請過目就好，別放在心上。
+```
+
+- [name=EIT-]
+- [time=Sun, Jun 29, 2025 7:14 AM]
+
+#### Acknowledge
+
+> [Directed Acyclic Graph](https://web.ntnu.edu.tw/~algo/DirectedAcyclicGraph.html)
+
+> [T客幫 演算法 DFS與BFS](https://ithelp.ithome.com.tw/articles/10281404)
+
+- [time=Sun, Jun 29, 2025 5:50 AM]

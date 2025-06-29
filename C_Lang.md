@@ -1,13 +1,13 @@
 # C 程式語言筆記 
 
-`C_Programing_Language_Learning_Note`
-
-> [Creative Commons License 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+> GFPL: General Freedom Public License
 
 - Start Time: 2025.02.02
-- Last Update : [time=Wed, Jun 25, 2025 7:38 AM]
+- Last Update : [time=Sun, Jun 29, 2025 8:21 AM]
 
 ---
+
+`C_Programing_Language_Learning_Note`
 
 **C語言為編譯式語言**
 > C語言是一種通用的、程序式編程，程式語言，支援結構化編程、詞法作用域和遞迴，使用靜態型別系統，並且廣泛用於系統軟體與應用軟體的開發。
@@ -20,13 +20,14 @@
 
 > Acknowledge
 
-- [C語言 - wiki](https://zh.wikipedia.org/zh-tw/C%E8%AF%AD%E8%A8%80)
-- [time=Sat, Feb 22, 2025 8:33 AM]
+- [C語言 - Wikipedia](https://zh.wikipedia.org/zh-tw/C%E8%AF%AD%E8%A8%80)
+- [time=Sun, Jun 29, 2025 8:17 AM]
 
 ### 開發環境
 
 - Dev C++
-- [OnlineGDB](https://www.onlinegdb.com/online_c_compiler)
+- [OnlineGDB](https://www.onlinegdb.com/)
+- [Learn C Programming](https://learn.onlinegdb.com/learn_c_programming)
 
 #### 引入標頭檔
 
@@ -49,7 +50,7 @@ int main(){
     return 0;
 }
 ```
----
+
 
 #### 範例
 
@@ -76,12 +77,12 @@ int main(){
 }
 ```
 
----
-
 #### Print 格式
 
 * 格式由"%"與格式字元組成，將輸出的數據轉換為指定的格式輸出，由"%"開始。
 * 格式字元：d, o, x, u, c, s, f, e, g, ...。
+
+> [C語言教學手冊 天瓏網路書局](https://www.tenlong.com.tw/products/9789574424849)
 
 <!--  
 ```c=
@@ -95,12 +96,13 @@ int main(){
 %.100f 用來輸出實數，保留小數點100位。
 %e 以指數形式輸出實數。
 %g 根據大小自動選f格式或e格式，且不輸出無意義的零。
+%p 是列印位址(指標位址)，以十六進位的形式，全部顯示。
 ```
 - [CSDN博客](https://blog.csdn.net/qq_32365567/article/details/55045942)
 
+- [CSDN博客](https://blog.csdn.net/Young__Fan/article/details/90609247)
 -->
 
----
 
 #### 變數的資料型態
 :::info
@@ -144,7 +146,6 @@ unsign 無號
 | unsigned int | 無號整數 | 4 | 0~4294927695 |
 | unsigned short int | 無號短整數 | 2 | 0~65535 |
 
----
 
 #### 基本型態資料的溢位
 
@@ -169,7 +170,6 @@ int main()
 }
 ```
 
----
 
 #### 字元型態 char
 
@@ -187,6 +187,7 @@ ASCII是American Standard Code for Information Interchange的縮寫，
 ```
 
 > [C The sizeof Operator - W3school](https://www.w3schools.com/c/c_data_types_sizeof.php)
+
 > [位元組 - wiki]( https://zh.wikipedia.org/zh-tw/%E5%AD%97%E8%8A%82)
 
 #### ASCII 範例
@@ -220,7 +221,6 @@ int main(){
 | \* | 單引號(single quote) | 39 |
 | \" | 雙引號(double quote) | 34 |
 
----
 
 ### 運算子的優先順序
 
@@ -243,7 +243,6 @@ int main(){
 | 13       | ?!                  | 條件運算子 | 由右至左 |
 | 14       | =                   | 設定運算子 | 由右至左 |
 
----
 
 #### 一元運算子
 
@@ -286,13 +285,11 @@ int main(void)
 | /      | 除法    | 5 / 2 = 2    |     |
 
 note: `% 算餘數， 5 % 2 = 1 。` 
-
-note: `C 小數使用 =`
 <!-- note: `十進位小數好像使用 Decimal in C#` -->
 
 - [time=Thu, Mar 6, 2025 5:11 PM]
+- [time=Sun, Jun 29, 2025 1:30 PM]
 
----
 
 #### 位元邏輯運算子
 
@@ -310,11 +307,9 @@ note: `C 小數使用 =`
 | num << n | 左移，將num的位元向左移n個位元 |
 | num >> n | 右移，將num的位元項右移n個位元 |
 
-<!-- F(I/O) -->
 
 - [time=Sun, Jun 1, 2025 10:23 AM]
 
----
 
 #### Define 前置處理器
 
@@ -335,7 +330,6 @@ END
 note: `C 語言中 typedef 可以用來擴充 C 原有的資料型態`
 - [time=Wed, Jun 4, 2025 6:27 AM]
 
----
 
 ### 指標 Pointer
 - 位址運算子【&】: 可用來取得變數的位址。
@@ -359,7 +353,6 @@ int main(void)
 }
 ```
 
----
 
 #### C stdlib calloc() 函數
 
@@ -396,7 +389,6 @@ int main()
 - [w3schools C calloc()](https://www.w3schools.com/c/ref_stdlib_calloc.php)
 - [time=Tue, Mar 18, 2025 10:25 AM]
 
----
 
 #### C stdlib malloc() 函數
 
@@ -431,7 +423,6 @@ int main()
 - [w3schools C malloc()](https://www.w3schools.com/c/ref_stdlib_malloc.php)
 - [time=Tue, Mar 18, 2025 11:02 AM]
 
----
 
 #### 結構變數的使用及初值的設定
 
@@ -460,7 +451,6 @@ int main()
 ```
 - [time=Fri, Feb 21, 2025 10:38 AM]
 
----
 
 #### If...Else statement
 
@@ -482,7 +472,6 @@ int main(){
 }
 ```
 
----
 
 #### While loop statement
 
@@ -504,7 +493,6 @@ int main(){
 }
 ```
 
----
 
 #### Do While loop statement
 
@@ -527,14 +515,12 @@ int main(){
 }
 ```
 
----
 
 #### 數字替換函式 Swap Number
 
 - [Swap number - GDB_Online_Editor](https://learn.onlinegdb.com/c_program_to_swap_two_numbers)
 - [time=Sat, Mar 15, 2025 8:59 AM]
 
----
 
 #### 陣列
 
@@ -556,7 +542,6 @@ int main()
 }
 ```
 
----
 
 #### 處理陣列
 
@@ -590,11 +575,9 @@ int main()
 }
 ```
 
----
 
 ### 函數
-
-#### 階乘函數
+#### 階乘函式 (遞迴函數)
 ```c=
 #include<stdio.h>
 #include<stdlib.h>
@@ -602,7 +585,8 @@ int fac(int);
 
 int fac(int n)
 {
-    if (n > 1) return (n * fac(n - 1));
+    if(n > 9) return 0;
+    if(n > 1) return (n * fac(n - 1));
     else return 1;
 }
 
@@ -614,118 +598,36 @@ int main()
 }
 ```
 
- - [time=Thu, Jun 19, 2025 6:02 AM]
+- [time=Thu, Jun 19, 2025 6:02 AM]
 
----
 
-#### 費波納契函數(遞迴函數)
+### 演算法
+#### 費波納契數列
 
 ```c=
-#include<stdio.h>
-#include<stdlib.h>
-int fib(int);
+#include <stdio.h>
+int fib(int n);
 
 int fib(int n)
 {
-    if (n < 0 || n > 37) return -1;
-    if (n == 0) return 0;
-    if (n == 1) return 1;
-    return fib(n - 1) + fib(n - 2);
+    if(n < 0) return -1;
+    if(n < 1) return 0;
+    if(n > 9) return 0;
+    if(n > 1) return fib(n - 2) + fib(n - 1);
+    else return 1;
 }
 
 int main()
 {
-    printf("fib(6)=%d \n", fib(4));
-    system("pause");
+    printf("%d \n", fib(9));
     return 0;
 }
 
 /* https://stackoverflow.com/questions/3165293/fibonacci-sequence-in-c */
 ```
-> [fibonacci_stackoverflow](https://stackoverflow.com/questions/3165293/fibonacci-sequence-in-c)
-- [time=Thu, Jun 19, 2025 6:03 AM]
 
----
+- [time=Sun, Jun 29, 2025 12:33 PM]
 
-#### 有向無環圖 Directed Acyclic Graph
-
-```c=
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
-
-#define N 10
-
-typedef struct {
-    bool adj[N][N];  /* 鄰接矩陣 */
-    int visit[N];    /* 訪問標記 */
-    int order[N];    /* 拓撲排序結果 */
-    int t;           /* 記錄排序索引 */
-    bool cycle;      /* 是否存在環 */
-} Dag;
-
-void DFS(Dag *dagRef, int i) {
-    if ((*dagRef).visit[i] == 1) {
-        (*dagRef).cycle = true;
-        return;
-    }
-    if ((*dagRef).visit[i] == 2) return;
-
-    (*dagRef).visit[i] = 1;
-    
-    int j = 0;
-    while( j < N){
-	   if ((*dagRef).adj[i][j]) DFS(dagRef, j);
-	   j++; 
-    };
-    
-    (*dagRef).visit[i] = 2;
-    (*dagRef).order[(*dagRef).t++] = i;
-}
-
-void topological_ordering(Dag *dagRef) {
-    
-    int i = 0;
-    while (i < N){
-	(*dagRef).visit[i] = 0;
-	i++; 
-    }
-	
-    (*dagRef).t = 0;
-    (*dagRef).cycle = false;
-
-    i = 0;
-    while(i < N){
-	if ((*dagRef).visit[i] == 0) {
-            DFS(dagRef, i);
-        }
-    }
-
-    if ((*dagRef).cycle) {
-        printf("圖上有環\n");
-    } else {
-        printf("拓撲排序:\n");
-        
-        i = N - 1;
-        while( i >= 0){
-	    printf("%d ", (*dagRef).order[i]);
-	}
-
-        printf("\n");
-    }
-}
-
-int main() {
-    Dag dag = {0};  /* 直接使用變數而非指標 */ 
-    topological_ordering(&dag);
-    return 0;
-}
-```
-
-- [Directed Acyclic Graph](https://web.ntnu.edu.tw/~algo/DirectedAcyclicGraph.html)
-- [time=Thu, May 8, 2025 8:19 AM]
-
----
 
 #### DAG (DFS vs BFS)
 
@@ -851,8 +753,6 @@ int main() {
 - [time=Thu, May 8, 2025 8:23 AM]
 
 
----
-
 #### 泡泡排序法 Bubble Sort
 
 ```c=
@@ -862,22 +762,23 @@ int main() {
 int main()
 {
     int arrSize = 10; /* 陣列長度 */
-
-    int arr[10] = {3, 4, 0, 1, 2, 5, 6, 9, 7, 8}; /* 宣告陣列  */
+    int arr[10] = {3, 4, 0, 1, 2, 5, 6, 9, 7, 8}; /* 宣告陣列 */
     size_t arr_n = sizeof(arr) / sizeof(arr[0]);
 
     printf("arr 陣列的長度arr_n=%lu \n", arr_n);
-    printf("arr 陣列的長度值arr_n位元=%lu \n", sizeof(arr_n));
+    printf("arr 陣列的值，位元=%lu \n", sizeof(arr_n));
     printf("arr--- \n");
 
+    
     int i = 0;
-    for (i = 0; i < arrSize; i++)
+    for(i = 0; i < arrSize; i++)
     {
         printf("%d \t", arr[i]);
     }
+    
+    printf("\n");
 
     i = arr_n;
-
     do
     {
         if (i > 0)
@@ -887,25 +788,46 @@ int main()
             {
                 if (arr[j] < arr[j - 1])
                 {
+                    /*  */
                     int w = arr[j];
                     arr[j] = arr[j - 1];
                     arr[j - 1] = w;
-                    
-                    /*  */
+                    printf("%d \t", w);
                 }
+                
                 j++;
-            } while (j < i);
+            } while(j < i);
+            
             i--;
             if (i == 0)
                 break;
         }
-    } while (i < arr_n);
+    } while(i < arr_n);
 
     printf("\n");
     printf("arr--- \n");
 
-    i = 0;
-    for (i = 0; i < arrSize; i++)
+    
+    for(i = 0; i < arrSize; i++)
+    {
+        printf("%d \t", arr[i]);
+    }
+    
+    printf("\n");
+    
+    
+    for(i = arr_n; i==0; i-=1 ){
+        for(int j = 1;  j < i; j+=1){
+            int w = arr[j];
+            arr[j] = arr[j - 1];
+            arr[j - 1] = w;
+        }
+    }
+    
+    printf("\n");
+    
+    
+    for(i = 0; i < arrSize; i++)
     {
         printf("%d \t", arr[i]);
     }
@@ -914,9 +836,134 @@ int main()
 }
 ```
 
-- [time=Sun, Jun 22, 2025 12:48 PM]
+- [time=Thu, Jun 26, 2025 2:38 PM]
 
----
+<!-- 
+ 
+```c=
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+#include <stdio.h>
+#include <stdlib.h>
+
+#define N 10
+
+int main()
+{
+    int arrSize = 10; /* 陣列長度 */
+    int arr[10] = {3, 4, 0, 1, 2, 5, 6, 9, 7, 8}; /* 宣告陣列 */
+    size_t arr_n = sizeof(arr) / sizeof(arr[0]);
+    int si = (arr_n <= arrSize) ? (int)arr_n : -1; // -1 表示錯誤
+
+    printf("arr 陣列的長度arr_n=%lu \n", arr_n);
+    printf("arr 陣列的長度值arr_n位元=%lu \n", sizeof(arr_n));
+    printf("arr--- \n");
+
+    
+    int i = 0;
+    for(i = 0; i < arrSize; i++)
+    {
+        printf("%d \t", arr[i]);
+    }
+    
+    printf("\n");
+
+    i = arr_n;
+    do
+    {
+        if (i > 0)
+        {
+            int j = 1;
+            do
+            {
+                if (arr[j] < arr[j - 1])
+                {
+                    /*  */
+                    int w = arr[j];
+                    arr[j] = arr[j - 1];
+                    arr[j - 1] = w;
+                    printf("%d \t", w);
+                }
+                
+                j++;
+            } while(j < i);
+            
+            i--;
+            if (i == 0)
+                break;
+        }
+    } while(i < arr_n);
+
+    printf("\n");
+    printf("arr--- \n");
+
+    
+    for(i = 0; i < arrSize; i++)
+    {
+        printf("%d \t", arr[i]);
+    }
+    
+    printf("\n");
+    
+    
+    for(i = arr_n; i==0; i-=1 ){
+        for(int j = 1;  j < i; j+=1){
+            int w = arr[j];
+            arr[j] = arr[j - 1];
+            arr[j - 1] = arr[j];
+        }
+    }
+    
+    printf("\n");
+    
+    
+    for(i = 0; i < arrSize; i++)
+    {
+        printf("%d \t", arr[i]);
+    }
+    
+    printf("\n");
+    
+    // bubbleSort(arr, si, arrSize);
+
+    return 0;
+}
+
+// int bubbleSort(int arr , int maxN){
+    
+//     maxN = 10;
+//     int i = 0;
+//     size_t si = sizeof(arr) / sizeof(arr[0]);
+//     int np = (si <= N) ? (int)si : -1; // -1 表示錯誤
+    
+    
+//     for(i = np; i==0; i-=1 ){
+//         for(int j = 1;  j < i; j+=1){
+//             int w = arr[j];
+//             arr[j] = arr[j - 1];
+//             arr[j - 1] = arr[j];
+//         }
+//     }
+    
+//     printf("\n");
+    
+    
+//     for(i = 0; i < arrSize; i++)
+//     {
+//         printf("%d \t", arr[i]);
+//     }
+
+//     return 0;
+// }
+```
+
+-->
+
 
 #### 二分搜尋法
 
@@ -946,14 +993,14 @@ int binarySearch(int arr[], int size, int target) {
     int right = size - 1;
 
     while (left <= right) {
-        int mid = (left + right) / 2;
+        int moderate = (left + right) / 2;
 
-        if (arr[mid] == target) {
-            return mid; // 找到目標
-        } else if (arr[mid] < target) {
-            left = mid + 1; // 往右邊找
+        if (arr[moderate] == target) {
+            return moderate; // 找到目標
+        } else if (arr[moderate] < target) {
+            left = moderate + 1; // 往右邊找
         } else {
-            right = mid - 1; // 往左邊找
+            right = moderate - 1; // 往左邊找
         }
     }
 
@@ -994,8 +1041,9 @@ int main() {
 ```
 
 - [time=Sun, Jun 22, 2025 12:49 PM]
+- [time=Sun, Jun 29, 2025 3:15 PM]
 
----
+
 #### Binary Tree
 
 ```c=
@@ -1069,10 +1117,17 @@ int main() {
     return 0;
 }
 ```
+```
+Pre-order Traversal: 0 1 3 7 8 4 9 2 5 6   /* 前序排列 */
+In-order Traversal: 7 3 8 1 9 4 0 5 2 6    /* 中序排列 */
+
+
+...Program finished with exit code 0
+Press ENTER to exit console.
+```
 
 - [time=Tue, Jun 24, 2025 1:27 PM]
 
----
 
 ### 數學 Math
 
@@ -1084,12 +1139,10 @@ $Latex$
 - [LaTeX Project Public License _ LPPL](https://en.wikipedia.org/wiki/LaTeX_Project_Public_License)
 - [MathJax](https://docs.mathjax.org/en/latest/basic/mathematics.html)
 
----
 
 #### 黃金比例 Golden Ratio
 
 ![黃金比例](https://hackmd.io/_uploads/S1SdF5Q4ex.png)
-
 
 $A = \frac{y}{x-\frac{y}{x-\frac{y}{...}}} = \frac{y}{x-A}$
 
@@ -1102,7 +1155,6 @@ $\phi = \frac{1 + \sqrt{5}}{2}$
 > [黃金比例 維基百科](https://zh.wikipedia.org/wiki/%E9%BB%84%E9%87%91%E5%88%86%E5%89%B2%E7%8E%87)
 - [time=Mon, Jun 23, 2025 9:07 AM]
 
----
 
 #### 質因數分解
 
@@ -1110,19 +1162,21 @@ $362880 = 0 + 1 \times 2 \times 3 \times 4 \times 5 \times 6 \times 7 \times 8 \
 
 $707281 = 841 \times 841 = 29^{4}$
 
-- [質因數 維基百科](https://zh.wikipedia.org/zh-tw/%E8%B3%AA%E5%9B%A0%E6%95%B8)
-- [time=Mon, Jun 23, 2025 9:07 AM]
+$729 = 27^{2}$
 
----
+- [質因數 維基百科](https://zh.wikipedia.org/zh-tw/%E8%B3%AA%E5%9B%A0%E6%95%B8)
+- [time=Thu, Jun 26, 2025 3:57 PM]
+
 
 #### 哥德巴赫猜想
 
 $32 = 13 + 19$
 
-- [歌德巴赫猜想 維基百科](https://zh.wikipedia.org/zh-tw/%E5%93%A5%E5%BE%B7%E5%B7%B4%E8%B5%AB%E7%8C%9C%E6%83%B3)
-- [time=Thu, Jun 19, 2025 5:49 AM]
+$200 = 31 + 13^{2} = 37 + 163$
 
----
+- [歌德巴赫猜想 維基百科](https://zh.wikipedia.org/zh-tw/%E5%93%A5%E5%BE%B7%E5%B7%B4%E8%B5%AB%E7%8C%9C%E6%83%B3)
+- [time=Thu, Jun 26, 2025 9:20 AM]
+
 
 #### 三角函數 Triangle
 
@@ -1145,10 +1199,9 @@ int main(){
 }
 ```
 
-> [三角函數 維基百科](https://zh.wikipedia.org/zh-tw/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0)
-- [time=Thu, Jun 19, 2025 5:49 AM]
+- [三角函數 維基百科](https://zh.wikipedia.org/zh-tw/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0)
+- [time=Sun, Jun 29, 2025 10:01 AM]
 
----
 
 #### 泰勒展開式 Taylor Expansion
 
@@ -1156,33 +1209,32 @@ int main(){
 在數學上，對於一個在實數或複數$a$鄰域上，以實數作為變量或以複數作為變量的函數，並且是無窮可微的函數$f(x)$，它的泰勒級數是以下這種形式的冪級數
 :::
 
-![image alt](https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Taylorspolynomialexbig.svg/600px-Taylorspolynomialexbig.svg.png)
+![$y=e^{x}$](https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Taylorspolynomialexbig.svg/600px-Taylorspolynomialexbig.svg.png)
+
+:::spoiler
+如果$a = 0$，也可以把這個級數稱為馬克勞林級數。
+$y=e^{x}$
+:::
 
 $$
 \sum_{n=0}^{\infty}{\cfrac {f^{(n)}(a)}{n!}}(x-a)^{n}
 $$
 
-:::spoiler
-如果$a = 0$，也可以把這個級數稱為馬克勞林級數。
-:::
-
 - [泰勒定理 維基百科](https://zh.m.wikipedia.org/wiki/%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F)
 - [泰勒展開式 維基百科](https://zh.wikipedia.org/zh-tw/%E6%B3%B0%E5%8B%92%E7%BA%A7%E6%95%B0) 
 - [time=Wed, Jun 25, 2025 7:38 AM]
 
----
 
 #### 黎曼和
 
-
-![image alt](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Integral_as_region_under_curve.svg/500px-Integral_as_region_under_curve.svg.png =200x200)
+![image alt](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Integral_as_region_under_curve.svg/500px-Integral_as_region_under_curve.svg.png =255x255)
 ![分割越來越「細」的黎曼和](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Riemann.gif/500px-Riemann.gif)
 
 <!-- ![多元函數的展開](https://wikimedia.org/api/rest_v1/media/math/render/svg/c429bf7c3300745b302d2906cb24577a309ec9f5) -->
 
 - [黎曼積分 維基百科](https://zh.wikipedia.org/wiki/%E9%BB%8E%E6%9B%BC%E7%A7%AF%E5%88%86)
+- [time=Sat, Jun 28, 2025 7:01 AM]
 
----
 
 #### 傅立葉轉換
 
@@ -1195,7 +1247,7 @@ $F(f)(\mathbf{k}) = {\hat {f(\mathbf{k})}} = \int_{\mathbb{R}^d} f(\mathbf{x})\,
 - [傅立葉轉換 維基百科](https://zh.wikipedia.org/zh-tw/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2)
 - [time=Tue, Jun 24, 2025 12:31 PM]
 
----
+
 #### Q: 何謂穩固結構
 
 ```
@@ -1203,18 +1255,19 @@ What structure would be Solidity ?
 參考以上圖形，最簡單的起點為三角形，最簡單的回答為圓形。
 ```
 ```
+以上筆記請過目就好，不要放在心上。
+```
+```
 讀過一本書，
 書名為真確。
 ```
 
 - [name=EIT-]
+- [time=Sat, Jun 28, 2025 7:01 AM]
 
----
 
 #### Reference 參考資料：
 
-> [C語言教學手冊](https://www.books.com.tw/products/0010360466)
+> [C語言教學手冊 博客來](https://www.books.com.tw/products/0010360466)
 
-> [C語言學習聖經](https://www.books.com.tw/products/0010958702?sloc=main)
-
-> [真確 - 博客來](https://www.books.com.tw/products/E050030362?sloc=main)
+> [真確 - 誠品](https://www.eslite.com/product/1001124182687226)

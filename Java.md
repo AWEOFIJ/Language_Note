@@ -1,9 +1,11 @@
-# JAVA 筆記
+# JAVA 程式語言筆記
 
 `Note` `2025.02.28`
 
  - Start Time: [time=Wed, May 28, 2025 1:50 PM]
- - Last Update: [time=Thu, Jun 5, 2025 12:38 PM]
+ - Last Update: [time=Sun, Jun 29, 2025 9:36 AM]
+
+### Gemini 產生範例
 
 好的，這是一個使用 Java 8 實現泡泡排序法的範例程式碼。
 
@@ -76,7 +78,7 @@ public class BubbleSort {
    * 列印原始陣列。
    * 呼叫 bubbleSort 方法對陣列進行排序。
    * 列印排序後的陣列。
-   * 包含了一些額外的測試案例來驗證程式的健壯性。
+   * 包含了一些額外的測試案例來驗證程式的"合理"性。
  * bubbleSort(int[] arr) 方法：
    * int n = arr.length;: 取得陣列的長度。
    * boolean swapped;: 這是泡泡排序的一個優化點。如果在一輪內層迴圈中沒有任何元素被交換，表示陣列已經是排序好的，這時就可以提前終止排序，避免不必要的比較。
@@ -105,3 +107,16 @@ swapped = true; // 標記發生了交換
 
 - [name=Gemini]
 - [time=Thu, Jun 5, 2025 10:58 AM]
+
+- [name=EIT-]
+- [time=Sun, Jun 29, 2025 9:36 AM]
+
+---
+
+#### Acknowledge 
+ 
+> [JAVA筆記](https://hackmd.io/@aluo96078/H15YAp2Uv)
+ 
+> [Java SE8 OCAJP專業認證指南](https://www.books.com.tw/products/E050057008?sloc=main)
+
+> [Java SE8 OCPJP進階認證指南](https://www.books.com.tw/products/E050057009?loc=P_br_r0vq68ygz_D_2aabd0_C_2)

@@ -1,9 +1,10 @@
 # C 程式語言筆記 
 
-> GFPL: General Freedom Public License
+> GFDL: General Freedom Document License
 
+- [name=EIT-]
 - Start Time: 2025.02.02
-- Last Update : [time=Sun, Jun 29, 2025 8:21 AM]
+- Last Update : [time=Sun, Jul 13, 2025 6:53 PM]
 
 ---
 
@@ -67,7 +68,7 @@ int main(){
     
     / ... */
 
-    if (observed=1){
+    if (observed == 1){
         /* action = "take action"; */
         /* printf(action); */
     }
@@ -1252,18 +1253,13 @@ $F(f)(\mathbf{k}) = {\hat {f(\mathbf{k})}} = \int_{\mathbb{R}^d} f(\mathbf{x})\,
 
 ```
 What structure would be Solidity ? 
-參考以上圖形，最簡單的起點為三角形，最簡單的回答為圓形。
+參考以上圖形，最簡單的起點為三角形，最簡單的回答為多邊形乃至圓形。
 ```
 ```
-以上筆記請過目就好，不要放在心上。
-```
-```
-讀過一本書，
+推薦一本書，
 書名為真確。
 ```
-
-- [name=EIT-]
-- [time=Sat, Jun 28, 2025 7:01 AM]
+- [time=Sun, Jul 13, 2025 6:52 PM]
 
 
 #### Reference 參考資料：

@@ -1,13 +1,14 @@
-# Math
+# Math 數學
 
 > Creative Common License - 1.0
+
+- [name=EIT-]
 
 Start time:
 - [time=Tue, Jun 24, 2025 12:55 PM]
 
 Last update:
-- [time=Sat, Jun 28, 2025 6:21 AM]
-- [time=Sun, Jun 29, 2025 9:49 AM]
+- [time=Sun, Jul 13, 2025 6:51 PM]
 
 #### 泰勒展開式 Taylor Expansion
 
@@ -52,14 +53,16 @@ $$
 - [time=Tue, Jun 24, 2025 12:31 PM]
 
 
-#### 
+#### 數學在生活方面的特殊意義
 
-```
-/* Crafting Interpreters 
-https://play.google.com/store/books/details/Robert_Nystrom_Crafting_Interpreters?id=q0c6EAAAQBAJ&hl=zh_TW 
-*/
-```
+數學是門語言，透過再在這樣子的特殊意義的認定，從看清楚路燈與電線桿開始，小時候大家都會做得不用計算，普通計算，然後在一路結算，到是的，到嘴巴裡面。
+
+有溫度，有感情，有心，理解足夠，到位的事情，萬丈高樓平地起，深淵允遠煖看齊。
+
+- [time=Tue, Jul 8, 2025 9:40 AM]
 
 #### Acknowledge
 
+- [《Crafting Interpreters》 Robert Nystrom](
+https://play.google.com/store/books/details?id=q0c6EAAAQBAJ)
  - [Creative_Commons_NonCommercial_license - Wikipedia](https://en.wikipedia.org/wiki/Creative_Commons_NonCommercial_license)

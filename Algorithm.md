@@ -1,12 +1,9 @@
-# 演算法
-# Algorithm
+# 演算法 Algorithm
+演算法 Algorithm 深度優先搜尋 vs 廣度優先搜尋
 
-演算法
-Algorithm
-深度優先搜尋 vs 廣度優先搜尋
-
+- [name=EIT-]
 - Start time: 2025.05.25
-- Last Update: [time=Sun, Jun 29, 2025 7:14 AM]
+- Last Update: [time=Sun, Jul 13, 2025 6:47 PM]
 
 ### DAG
 #### Javascript
@@ -282,26 +279,18 @@ while (i < N){
                             ));
 }
 
-graph.printGraph();  /* yet complete */
+graph.printGraph();  
+/* yet complete */
 ```
 
-- [name=Copilot]
 - [time=Sun, Jun 29, 2025 5:55 AM]
-
-
-#### 
-
-```
-以上筆記請過目就好，別放在心上。
-```
-
-- [name=EIT-]
-- [time=Sun, Jun 29, 2025 7:14 AM]
 
 #### Acknowledge
 
 > [Directed Acyclic Graph](https://web.ntnu.edu.tw/~algo/DirectedAcyclicGraph.html)
 
+> [Tree](https://web.ntnu.edu.tw/~algo/Tree.html)
+
 > [T客幫 演算法 DFS與BFS](https://ithelp.ithome.com.tw/articles/10281404)
 
-- [time=Sun, Jun 29, 2025 5:50 AM]
+> [博客來 圖說演算法 使用JavaScript](https://share.google/EyqlfBUyhuSZRLQB3)

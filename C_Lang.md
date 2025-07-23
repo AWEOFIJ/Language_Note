@@ -1,10 +1,9 @@
-# C 程式語言筆記 
+# C 筆記 
 
-> GFDL: General Freedom Document License
+> GFDL: GNU Freedom Document License
 
-- [name=EIT-]
 - Start Time: 2025.02.02
-- Last Update : [time=Sun, Jul 13, 2025 6:53 PM]
+- Last Update : [time=Thu, Jul 24, 2025 3:10 AM]
 
 ---
 
@@ -1165,8 +1164,10 @@ $707281 = 841 \times 841 = 29^{4}$
 
 $729 = 27^{2}$
 
+$324 = 18^{2}$
+
 - [質因數 維基百科](https://zh.wikipedia.org/zh-tw/%E8%B3%AA%E5%9B%A0%E6%95%B8)
-- [time=Thu, Jun 26, 2025 3:57 PM]
+- [time=Thu, Jul 24, 2025 3:10 AM]
 
 
 #### 哥德巴赫猜想
@@ -1204,51 +1205,6 @@ int main(){
 - [time=Sun, Jun 29, 2025 10:01 AM]
 
 
-#### 泰勒展開式 Taylor Expansion
-
-:::info
-在數學上，對於一個在實數或複數$a$鄰域上，以實數作為變量或以複數作為變量的函數，並且是無窮可微的函數$f(x)$，它的泰勒級數是以下這種形式的冪級數
-:::
-
-![$y=e^{x}$](https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Taylorspolynomialexbig.svg/600px-Taylorspolynomialexbig.svg.png)
-
-:::spoiler
-如果$a = 0$，也可以把這個級數稱為馬克勞林級數。
-$y=e^{x}$
-:::
-
-$$
-\sum_{n=0}^{\infty}{\cfrac {f^{(n)}(a)}{n!}}(x-a)^{n}
-$$
-
-- [泰勒定理 維基百科](https://zh.m.wikipedia.org/wiki/%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F)
-- [泰勒展開式 維基百科](https://zh.wikipedia.org/zh-tw/%E6%B3%B0%E5%8B%92%E7%BA%A7%E6%95%B0) 
-- [time=Wed, Jun 25, 2025 7:38 AM]
-
-
-#### 黎曼和
-
-![image alt](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Integral_as_region_under_curve.svg/500px-Integral_as_region_under_curve.svg.png =255x255)
-![分割越來越「細」的黎曼和](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Riemann.gif/500px-Riemann.gif)
-
-<!-- ![多元函數的展開](https://wikimedia.org/api/rest_v1/media/math/render/svg/c429bf7c3300745b302d2906cb24577a309ec9f5) -->
-
-- [黎曼積分 維基百科](https://zh.wikipedia.org/wiki/%E9%BB%8E%E6%9B%BC%E7%A7%AF%E5%88%86)
-- [time=Sat, Jun 28, 2025 7:01 AM]
-
-
-#### 傅立葉轉換
-
-:::info
-通常定義為一種積分轉換。其基本思想是一個函數可以用（可數或不可數，可數的情況對應於傅立葉級數）無窮多個週期函數的線性組合來逼近，從而這些組合係數在保有原函數的幾乎全部資訊的同時，還直接地反映了該函數的「頻域特徵」。(維基百科)
-:::
-
-$F(f)(\mathbf{k}) = {\hat {f(\mathbf{k})}} = \int_{\mathbb{R}^d} f(\mathbf{x})\, e^{-2\pi i\, \mathbf{k} \cdot \mathbf{x}}\, d\mathbf{x}$
-
-- [傅立葉轉換 維基百科](https://zh.wikipedia.org/zh-tw/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2)
-- [time=Tue, Jun 24, 2025 12:31 PM]
-
-
 #### Q: 何謂穩固結構
 
 ```
@@ -1264,6 +1220,5 @@ What structure would be Solidity ?
 
 #### Reference 參考資料：
 
-> [C語言教學手冊 博客來](https://www.books.com.tw/products/0010360466)
-
-> [真確 - 誠品](https://www.eslite.com/product/1001124182687226)
+* [C語言教學手冊 博客來](https://www.books.com.tw/products/0010360466)
+* [真確 - 誠品](https://www.eslite.com/product/1001124182687226)

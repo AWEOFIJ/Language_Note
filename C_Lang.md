@@ -1,9 +1,10 @@
 # C 筆記 
 
+`Note` `2025.02.02`
+
 > GFDL: GNU Freedom Document License
 
-- Start Time: 2025.02.02
-- Last Update : [time=Thu, Jul 24, 2025 3:10 AM]
+- Last Update : [time=Sun, Sep 7, 2025 8:31 AM]
 
 ---
 
@@ -11,6 +12,7 @@
 
 **C語言為編譯式語言**
 > C語言是一種通用的、程序式編程，程式語言，支援結構化編程、詞法作用域和遞迴，使用靜態型別系統，並且廣泛用於系統軟體與應用軟體的開發。
+
 
 #### 特點:
 - 移植性高: C語言提供前置處理器來處理不同平台之間的問題。
@@ -23,11 +25,12 @@
 - [C語言 - Wikipedia](https://zh.wikipedia.org/zh-tw/C%E8%AF%AD%E8%A8%80)
 - [time=Sun, Jun 29, 2025 8:17 AM]
 
+
 ### 開發環境
 
-- Dev C++
+- [Dev C++](https://bloodshed.net/)
 - [OnlineGDB](https://www.onlinegdb.com/)
-- [Learn C Programming](https://learn.onlinegdb.com/learn_c_programming)
+
 
 #### 引入標頭檔
 
@@ -35,6 +38,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 ```
+
 
 #### 主程式區塊
 
@@ -77,6 +81,7 @@ int main(){
 }
 ```
 
+
 #### Print 格式
 
 * 格式由"%"與格式字元組成，將輸出的數據轉換為指定的格式輸出，由"%"開始。
@@ -99,7 +104,6 @@ int main(){
 %p 是列印位址(指標位址)，以十六進位的形式，全部顯示。
 ```
 - [CSDN博客](https://blog.csdn.net/qq_32365567/article/details/55045942)
-
 - [CSDN博客](https://blog.csdn.net/Young__Fan/article/details/90609247)
 -->
 
@@ -125,6 +129,7 @@ sign 有號
 unsign 無號
 :::
 
+
 #### 基本資料型態
 
 | 資料型態  |           | 型態說明     | 位元組(byte) | 表示範圍               |
@@ -137,6 +142,7 @@ unsign 無號
 |            | double    | 倍精度浮點數 | 8      | 2.2e-308~1.8e308       |
 | 有號 | singed | 有號的變數可存放正值或負值 |  |  |
 | 無號 | unsigned | 無號的變數只能存放正值 |  |  |
+
 
 #### 無號整數
 
@@ -190,7 +196,9 @@ ASCII是American Standard Code for Information Interchange的縮寫，
 
 > [位元組 - wiki]( https://zh.wikipedia.org/zh-tw/%E5%AD%97%E8%8A%82)
 
+
 #### ASCII 範例
+
 ```c=
 #include<stdio.h>
 #include<stdlib.h>
@@ -207,6 +215,7 @@ int main(){
 }
 ```
 
+
 #### 常用的跳脫字元
 
 | 跳脫字元 | 所代表的意義 | 十進位ASCII |
@@ -218,8 +227,9 @@ int main(){
 | \0 | 字串結束字元(null charactor) | 0 |
 | \t | 跳格(tab) | 9 |
 | \\ | 反斜線(backslash) | 92 |
-| \* | 單引號(single quote) | 39 |
+| \' | 單引號(single quote) | 39 |
 | \" | 雙引號(double quote) | 34 |
+
 
 
 ### 運算子的優先順序
@@ -242,6 +252,7 @@ int main(){
 | 12       | \\|\\|              | 邏輯運算子 | 由左至右 |
 | 13       | ?!                  | 條件運算子 | 由右至左 |
 | 14       | =                   | 設定運算子 | 由右至左 |
+
 
 
 #### 一元運算子
@@ -275,7 +286,8 @@ int main(void)
 
 - [time=Sat, Feb 22, 2025 8:26 AM]
 
- #### 算數運算子
+
+#### 算數運算子
 
 | 運算子 | 意義 | 範例 |     |
 | ------ | ---- | ---- | --- |
@@ -284,10 +296,9 @@ int main(void)
 | *      | 乘法    | 5 * 2 = 10     |     |
 | /      | 除法    | 5 / 2 = 2    |     |
 
-note: `% 算餘數， 5 % 2 = 1 。` 
-<!-- note: `十進位小數好像使用 Decimal in C#` -->
+- note: `% 算餘數， 5 % 2 = 1 。` 
+- note: `十進位小數使用 Decimal in C#`
 
-- [time=Thu, Mar 6, 2025 5:11 PM]
 - [time=Sun, Jun 29, 2025 1:30 PM]
 
 
@@ -299,6 +310,7 @@ note: `% 算餘數， 5 % 2 = 1 。`
 | & | 位元AND運算子 |
 | \\| | 位元OR運算子 |
 | ^ | 位元XOR運算子 |
+
 
 #### 位元位移運算子
 
@@ -439,18 +451,18 @@ typedef struct data
 
 int main()
 {
-    struct data student = {"Andy", 1, 85};
+    struct data student = {"Andy", 1, 80};
     printf("%s", student.name);
-    
-    /* ... */
     
     /* system("pause"); */
     
     return 0;
 }
 ```
-- [time=Fri, Feb 21, 2025 10:38 AM]
+- [time=Sun, Aug 3, 2025 2:46 AM]
 
+
+### Statement
 
 #### If...Else statement
 
@@ -623,6 +635,7 @@ int main()
     return 0;
 }
 
+/* n > 9 return 0 for redundant avoid computing */
 /* https://stackoverflow.com/questions/3165293/fibonacci-sequence-in-c */
 ```
 
@@ -636,121 +649,264 @@ int main()
 #include <stdlib.h>
 #include <stdbool.h>
 
+#define MAX 100
 #define N 10
 
+/* =========================
+   Queue 模組 (FIFO)
+   ========================= */
 typedef struct {
-    bool adjacency[N][N];  
-    int visited[N];    
-    int order[N];    
-    int index;      
-    bool has_cycle;  
+    int data[MAX];
+    int front;
+    int rear;
+} Queue;
+
+void initQueue(Queue *q) {
+    (*q).front = 0;
+    (*q).rear = 0;
+}
+
+int isEmptyQueue(Queue *q) {
+    return (*q).front == (*q).rear;
+}
+
+void enqueue(Queue *q, int value) {
+    if ((*q).rear < MAX) {
+        (*q).data[(*q).rear] = value;
+        (*q).rear = (*q).rear + 1;
+    }
+}
+
+int dequeue(Queue *q) {
+    if (!isEmptyQueue(q)) {
+        int value = (*q).data[(*q).front];
+        (*q).front = (*q).front + 1;
+        return value;
+    }
+    return -1;
+}
+
+/* =========================
+   Stack 模組 (LIFO)
+   ========================= */
+typedef struct {
+    int data[MAX];
+    int top;
+} Stack;
+
+void initStack(Stack *s) {
+    (*s).top = -1;
+}
+
+int isEmptyStack(Stack *s) {
+    return (*s).top == -1;
+}
+
+void push(Stack *s, int value) {
+    if ((*s).top < MAX - 1) {
+        (*s).top = (*s).top + 1;
+        (*s).data[(*s).top] = value;
+    }
+}
+
+int pop(Stack *s) {
+    if (!isEmptyStack(s)) {
+        int value = (*s).data[(*s).top];
+        (*s).top = (*s).top - 1;
+        return value;
+    }
+    return -1;
+}
+
+/* =========================
+   Graph 結構
+   ========================= */
+typedef struct {
+    bool adjacency[N][N];
 } Graph;
 
-Graph depth_first_search(Graph graph_reference, int node) {
-    if (graph_reference.visited[node] == 1) {
-        graph_reference.has_cycle = true;
-        return graph_reference;
-    }
-    if (graph_reference.visited[node] == 2) return graph_reference;
-
-    graph_reference.visited[node] = 1;
-    
-    int adjacent = 0;
-    while(adjacent < N){
-		if (graph_reference.adjacency[node][adjacent]) {
-            graph_reference = depth_first_search(graph_reference, adjacent);
-        }
-		adjacent++;
-	}
-
-    graph_reference.visited[node] = 2;
-    graph_reference.order[graph_reference.index++] = node;
-
-    return graph_reference;
-}
-
-Graph topological_sort(Graph graph_reference) {
-	
-	int node = 0;
-	while(node < N){
-		graph_reference.visited[node] = 0;
-	}
-
-    graph_reference.index = 0;
-    graph_reference.has_cycle = false;
-
-	node = 0;
-	while(node < N){
-		if (graph_reference.visited[node] == 0) {
-            graph_reference = depth_first_search(graph_reference, node);
-        }
-	}
-
-    if (graph_reference.has_cycle) {
-        printf("Graph contains a cycle\n");
-    } else {
-        printf("Topological Sorting:\n");
-        
-        int i = N;
-        while(i >= 0){
-			printf("%d ", graph_reference.order[i]);
-		}
-        
-        printf("\n");
-    }
-
-    return graph_reference;
-}
-
+/* =========================
+   BFS (樹狀縮排)
+   ========================= */
 void breadth_first_search(Graph graph_reference, int starting_node) {
     bool visited[N] = {false};
-    int queue[N], front = 0, rear = 0;
+    Queue q;
+    initQueue(&q);
 
+    int level[N] = {0}; // 記錄節點層級
     visited[starting_node] = true;
-    queue[rear++] = starting_node;
+    enqueue(&q, starting_node);
 
-    printf("BFS Traversal:\n");
+    printf("BFS Tree View:\n");
 
-    while (front < rear) {
-        int current_node = queue[front++];
-        printf("%d ", current_node);
+    while (!isEmptyQueue(&q)) {
+        int current_node = dequeue(&q);
+        int depth = level[current_node];
 
-		int adjacent = 0;
-		while(adjacent < N){
-			if (graph_reference.adjacency[current_node][adjacent] && !visited[adjacent]) {
+        // 縮排輸出
+        for (int i = 0; i < depth; i++) printf("    ");
+        printf("└── %d\n", current_node);
+
+        for (int adjacent = 0; adjacent < N; adjacent++) {
+            if (graph_reference.adjacency[current_node][adjacent] && !visited[adjacent]) {
                 visited[adjacent] = true;
-                queue[rear++] = adjacent;
+                level[adjacent] = depth + 1;
+                enqueue(&q, adjacent);
             }
-		}
+        }
+    }
+}
+
+/* =========================
+   DFS (樹狀縮排)
+   ========================= */
+void dfs_recursive(Graph graph_reference, int node, bool visited[], int depth) {
+    visited[node] = true;
+
+    for (int i = 0; i < depth; i++) printf("    ");
+    printf("└── %d\n", node);
+
+    for (int adjacent = 0; adjacent < N; adjacent++) {
+        if (graph_reference.adjacency[node][adjacent] && !visited[adjacent]) {
+            dfs_recursive(graph_reference, adjacent, visited, depth + 1);
+        }
+    }
+}
+
+void depth_first_search(Graph graph_reference, int starting_node) {
+    bool visited[N] = {false};
+    printf("DFS Tree View:\n");
+    dfs_recursive(graph_reference, starting_node, visited, 0);
+}
+
+/* =========================
+   Topological Sort (樹狀縮排)
+   ========================= */
+void topo_dfs(Graph graph_reference, int node, bool visited[], Stack *result, int depth) {
+    visited[node] = true;
+
+    for (int i = 0; i < depth; i++) printf("    ");
+    printf("└── %d\n", node);
+
+    for (int adjacent = 0; adjacent < N; adjacent++) {
+        if (graph_reference.adjacency[node][adjacent] && !visited[adjacent]) {
+            topo_dfs(graph_reference, adjacent, visited, result, depth + 1);
+        }
+    }
+
+    push(result, node);
+}
+
+void topological_sort(Graph graph_reference) {
+    bool visited[N] = {false};
+    Stack result;
+    initStack(&result);
+
+    printf("Topological Sort Tree View:\n");
+    for (int node = 0; node < N; node++) {
+        if (!visited[node]) {
+            topo_dfs(graph_reference, node, visited, &result, 0);
+        }
+    }
+
+    printf("\nTopological Order:\n");
+    while (!isEmptyStack(&result)) {
+        printf("%d ", pop(&result));
     }
     printf("\n");
 }
 
+/* =========================
+   測試主程式
+   ========================= */
 int main() {
-    Graph graph = {0};  
+    Graph graph = {0};
 
+    /* 測試 BFS / DFS 的圖 */
     graph.adjacency[0][1] = true;
-    graph.adjacency[1][2] = true;
-    graph.adjacency[2][3] = true;
-    graph.adjacency[3][4] = true;
-    graph.adjacency[4][5] = true;
-    graph.adjacency[5][6] = true;
-    graph.adjacency[6][7] = true;
-    graph.adjacency[7][8] = true;
-    graph.adjacency[8][9] = true;
+    graph.adjacency[0][2] = true;
+    graph.adjacency[1][3] = true;
+    graph.adjacency[1][4] = true;
+    graph.adjacency[2][5] = true;
+    graph.adjacency[2][6] = true;
+    graph.adjacency[3][7] = true;
+    graph.adjacency[4][8] = true;
+    graph.adjacency[5][9] = true;
 
-    printf("Running Topological Sorting:\n");
-    graph = topological_sort(graph);
+    printf("=== DFS ===\n");
+    depth_first_search(graph, 0);
 
-    int start_node = 0;  
-    printf("Running BFS:\n");
-    breadth_first_search(graph, start_node);
+    printf("\n=== BFS ===\n");
+    breadth_first_search(graph, 0);
+
+    /* 測試 Topological Sort 的 DAG */
+    Graph dag = {0};
+    dag.adjacency[0][1] = true;
+    dag.adjacency[0][2] = true;
+    dag.adjacency[1][3] = true;
+    dag.adjacency[2][3] = true;
+    dag.adjacency[3][4] = true;
+
+    printf("\n=== Topological Sort ===\n");
+    topological_sort(dag);
 
     return 0;
 }
 ```
 
-- [time=Thu, May 8, 2025 8:23 AM]
+##### 假設圖結構如下：
+```
+0 → 1 → 3 → 7
+  ↘ 4 → 8
+0 → 2 → 5 → 9
+      ↘ 6
+```
+
+##### DFS Tree View
+```
+└── 0
+    └── 1
+        └── 3
+            └── 7
+        └── 4
+            └── 8
+    └── 2
+        └── 5
+            └── 9
+        └── 6
+```
+
+##### BFS Tree View
+```
+└── 0
+    └── 1
+    └── 2
+        └── 3
+        └── 4
+        └── 5
+        └── 6
+            └── 7
+            └── 8
+            └── 9
+```
+
+##### Topological Sort Tree View
+```
+└── 0
+    └── 1
+        └── 3
+            └── 4
+    └── 2
+        └── 3
+            └── 4
+```
+
+##### Topological Order:
+```
+0 2 1 3 4
+```
+
+- [time=Sat, Sep 6, 2025 8:52 PM]
 
 
 #### 泡泡排序法 Bubble Sort
@@ -766,19 +922,20 @@ int main()
     size_t arr_n = sizeof(arr) / sizeof(arr[0]);
 
     printf("arr 陣列的長度arr_n=%lu \n", arr_n);
-    printf("arr 陣列的值，位元=%lu \n", sizeof(arr_n));
+    printf("arr 陣列的位元=%lu \n", sizeof(arr_n));
     printf("arr--- \n");
 
     
     int i = 0;
-    for(i = 0; i < arrSize; i++)
+    for(i = 0; i < arrSize; ++i)
     {
         printf("%d \t", arr[i]);
     }
     
     printf("\n");
 
-    i = arr_n;
+    i = (int)arr_n;
+    
     do
     {
         if (i > 0)
@@ -788,19 +945,23 @@ int main()
             {
                 if (arr[j] < arr[j - 1])
                 {
-                    /*  */
                     int w = arr[j];
                     arr[j] = arr[j - 1];
                     arr[j - 1] = w;
-                    printf("%d \t", w);
+                    printf("\nw=%d \t---\n", w);
+                    
+                    int x=0;
+                    while(x < (int)arr_n) { 
+                        printf("%d \t", arr[x]);
+                        ++x;
+                    }
                 }
                 
                 j++;
             } while(j < i);
             
             i--;
-            if (i == 0)
-                break;
+            if (i == 0) { break; }
         }
     } while(i < arr_n);
 
@@ -814,155 +975,41 @@ int main()
     }
     
     printf("\n");
-    
-    
-    for(i = arr_n; i==0; i-=1 ){
-        for(int j = 1;  j < i; j+=1){
-            int w = arr[j];
-            arr[j] = arr[j - 1];
-            arr[j - 1] = w;
-        }
-    }
-    
-    printf("\n");
-    
-    
-    for(i = 0; i < arrSize; i++)
-    {
-        printf("%d \t", arr[i]);
-    }
 
     return 0;
 }
 ```
+```
+arr 陣列的長度arr_n=10 
+arr 陣列的位元=8 
+arr--- 
+3       4       0       1       2       5       6       9       7       8 
 
-- [time=Thu, Jun 26, 2025 2:38 PM]
+w=0     ---
+3       0       4       1       2       5       6       9       7       8 
+w=1     ---
+3       0       1       4       2       5       6       9       7       8 
+w=2     ---
+3       0       1       2       4       5       6       9       7       8 
+w=7     ---
+3       0       1       2       4       5       6       7       9       8 
+w=8     ---
+3       0       1       2       4       5       6       7       8       9 
+w=0     ---
+0       3       1       2       4       5       6       7       8       9 
+w=1     ---
+0       1       3       2       4       5       6       7       8       9 
+w=2     ---
+0       1       2       3       4       5       6       7       8       9 
+arr--- 
+0       1       2       3       4       5       6       7       8       9 
 
-<!-- 
- 
-```c=
-/******************************************************************************
 
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
-#include <stdio.h>
-#include <stdlib.h>
-
-#define N 10
-
-int main()
-{
-    int arrSize = 10; /* 陣列長度 */
-    int arr[10] = {3, 4, 0, 1, 2, 5, 6, 9, 7, 8}; /* 宣告陣列 */
-    size_t arr_n = sizeof(arr) / sizeof(arr[0]);
-    int si = (arr_n <= arrSize) ? (int)arr_n : -1; // -1 表示錯誤
-
-    printf("arr 陣列的長度arr_n=%lu \n", arr_n);
-    printf("arr 陣列的長度值arr_n位元=%lu \n", sizeof(arr_n));
-    printf("arr--- \n");
-
-    
-    int i = 0;
-    for(i = 0; i < arrSize; i++)
-    {
-        printf("%d \t", arr[i]);
-    }
-    
-    printf("\n");
-
-    i = arr_n;
-    do
-    {
-        if (i > 0)
-        {
-            int j = 1;
-            do
-            {
-                if (arr[j] < arr[j - 1])
-                {
-                    /*  */
-                    int w = arr[j];
-                    arr[j] = arr[j - 1];
-                    arr[j - 1] = w;
-                    printf("%d \t", w);
-                }
-                
-                j++;
-            } while(j < i);
-            
-            i--;
-            if (i == 0)
-                break;
-        }
-    } while(i < arr_n);
-
-    printf("\n");
-    printf("arr--- \n");
-
-    
-    for(i = 0; i < arrSize; i++)
-    {
-        printf("%d \t", arr[i]);
-    }
-    
-    printf("\n");
-    
-    
-    for(i = arr_n; i==0; i-=1 ){
-        for(int j = 1;  j < i; j+=1){
-            int w = arr[j];
-            arr[j] = arr[j - 1];
-            arr[j - 1] = arr[j];
-        }
-    }
-    
-    printf("\n");
-    
-    
-    for(i = 0; i < arrSize; i++)
-    {
-        printf("%d \t", arr[i]);
-    }
-    
-    printf("\n");
-    
-    // bubbleSort(arr, si, arrSize);
-
-    return 0;
-}
-
-// int bubbleSort(int arr , int maxN){
-    
-//     maxN = 10;
-//     int i = 0;
-//     size_t si = sizeof(arr) / sizeof(arr[0]);
-//     int np = (si <= N) ? (int)si : -1; // -1 表示錯誤
-    
-    
-//     for(i = np; i==0; i-=1 ){
-//         for(int j = 1;  j < i; j+=1){
-//             int w = arr[j];
-//             arr[j] = arr[j - 1];
-//             arr[j - 1] = arr[j];
-//         }
-//     }
-    
-//     printf("\n");
-    
-    
-//     for(i = 0; i < arrSize; i++)
-//     {
-//         printf("%d \t", arr[i]);
-//     }
-
-//     return 0;
-// }
+...Program finished with exit code 0
+Press ENTER to exit console.
 ```
 
--->
+- [time=Thu, Aug 7, 2025 10:03 PM]
 
 
 #### 二分搜尋法
@@ -973,17 +1020,26 @@ int main()
 
 // 泡泡排序法
 void bubbleSort(int arr[], int size) {
-    for (int i = 0; i < size - 1; i++) {
-        for (int j = 0; j < size - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                // 交換 arr[j] 和 arr[j+1]
+    
+    int i = size;
+    
+    while(i > 0){ 
+        
+        int j = 1;
+        while(j < i) { 
+            
+            if (arr[j] < arr[j - 1]) {
+                // 交換 arr[j] 和 arr[j-1]
                 int w = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = w;
+                arr[j] = arr[j - 1];
+                arr[j - 1] = w;
                 
-                /*  */
             }
+            
+            ++j;
         }
+        
+        --i;
     }
 }
 
@@ -991,16 +1047,22 @@ void bubbleSort(int arr[], int size) {
 int binarySearch(int arr[], int size, int target) {
     int left = 0;
     int right = size - 1;
+    
+    printf("搜尋對象: %d \n", target);
 
     while (left <= right) {
-        int moderate = (left + right) / 2;
+        int moderate = (left + right) / 2;  /* mod */  /* moderate */
+        
+        printf("取中間數: %d \n", moderate);
 
         if (arr[moderate] == target) {
             return moderate; // 找到目標
         } else if (arr[moderate] < target) {
             left = moderate + 1; // 往右邊找
+            printf("往右邊找! \n");
         } else {
             right = moderate - 1; // 往左邊找
+            printf("往左邊找! \n");
         }
     }
 
@@ -1009,11 +1071,12 @@ int binarySearch(int arr[], int size, int target) {
 
 int main() {
     // 未排序的陣列
-    int arr[] = {5, 2, 9, 1, 7, 6, 3, 8, 0, 4};
-    int size = sizeof(arr) / sizeof(arr[0]);
-    int target = 4; // 要查找的目標值
+    int arr[10] = {5, 2, 9, 1, 7, 6, 3, 8, 0, 4};
+    size_t size_array = sizeof(arr) / sizeof(arr[0]);
+    int size = (int)size_array;
+    int target = 2; // 要查找的目標值
 
-    printf("原始陣列：\n");
+    printf("原始陣列：\t");
     for (int i = 0; i < size; i++) {
         printf("%d ", arr[i]);
     }
@@ -1022,7 +1085,7 @@ int main() {
     // 排序陣列
     bubbleSort(arr, size);
 
-    printf("排序後的陣列：\n");
+    printf("排序後的陣列：\t");
     for (int i = 0; i < size; i++) {
         printf("%d ", arr[i]);
     }
@@ -1039,9 +1102,26 @@ int main() {
     return 0;
 }
 ```
+```c=
+原始陣列：      5 2 9 1 7 6 3 8 0 4 
+排序後的陣列：  0 1 2 3 4 5 6 7 8 9 
+搜尋對象: 2 
+取中間數: 4 
+往左邊找! 
+取中間數: 1 
+往右邊找! 
+取中間數: 2 
+找到數值 2 在索引位置 2。
 
-- [time=Sun, Jun 22, 2025 12:49 PM]
-- [time=Sun, Jun 29, 2025 3:15 PM]
+
+...Program finished with exit code 0
+Press ENTER to exit console.
+
+```
+
+<!-- - [time=Sun, Jun 29, 2025 3:15 PM] -->
+<!-- - [time=Thu, Aug 7, 2025 10:17 PM] -->
+- [time=Fri, Aug 8, 2025 4:19 AM]
 
 
 #### Binary Tree
@@ -1097,13 +1177,10 @@ int main() {
     (*root).right = createNode(2);
     (*(*root).left).left = createNode(3);
     (*(*root).left).right = createNode(4);
-    /*  */
     (*(*root).right).left = createNode(5);
     (*(*root).right).right = createNode(6);
-    /*  */
     (*(*(*root).left).left).left = createNode(7);
     (*(*(*root).left).left).right = createNode(8);
-    /*  */
     (*(*(*root).left).right).left = createNode(9);
     
     printf("Pre-order Traversal: ");
@@ -1113,6 +1190,10 @@ int main() {
     printf("In-order Traversal: ");
     inOrderTraversal(root);
     printf("\n");
+    
+    printf("Pro-order 後序排列");
+    
+    printf("\n");
 
     return 0;
 }
@@ -1120,13 +1201,13 @@ int main() {
 ```
 Pre-order Traversal: 0 1 3 7 8 4 9 2 5 6   /* 前序排列 */
 In-order Traversal: 7 3 8 1 9 4 0 5 2 6    /* 中序排列 */
-
+                                           /* Pro-order Traversal 後序排列 */
 
 ...Program finished with exit code 0
 Press ENTER to exit console.
 ```
 
-- [time=Tue, Jun 24, 2025 1:27 PM]
+- [time=Thu, Aug 7, 2025 10:05 AM]
 
 
 ### 數學 Math
@@ -1138,6 +1219,7 @@ $Latex$
 - [latex-tutorial](https://latex-tutorial.com/)
 - [LaTeX Project Public License _ LPPL](https://en.wikipedia.org/wiki/LaTeX_Project_Public_License)
 - [MathJax](https://docs.mathjax.org/en/latest/basic/mathematics.html)
+- [time=Fri, Aug 1, 2025 12:18 AM]
 
 
 #### 黃金比例 Golden Ratio
@@ -1149,32 +1231,38 @@ $A = \frac{y}{x-\frac{y}{x-\frac{y}{...}}} = \frac{y}{x-A}$
 $\frac{x}{y} = \frac{y}{x-y} = \phi$
 
 $\phi = \frac{1 + \sqrt{5}}{2}$
- 
+
+<!-- fraction = y / (x-y) -->
+<!-- - [time=Tue, Aug 5, 2025 11:28 AM] -->
+
 > [圖解數學](https://www.books.com.tw/products/0010777752?sloc=main)
 
 > [黃金比例 維基百科](https://zh.wikipedia.org/wiki/%E9%BB%84%E9%87%91%E5%88%86%E5%89%B2%E7%8E%87)
-- [time=Mon, Jun 23, 2025 9:07 AM]
+
+> [time=Fri, Aug 1, 2025 12:22 AM]
 
 
 #### 質因數分解
 
-$362880 = 0 + 1 \times 2 \times 3 \times 4 \times 5 \times 6 \times 7 \times 8 \times 9$
+$362880 
+= 0 + 1 \times 2 \times 3 \times 4 \times 5 \times 6 \times 7 \times 8 \times 9$
 
-$707281 = 841 \times 841 = 29^{4}$
-
-$729 = 27^{2}$
-
-$324 = 18^{2}$
+$707281 
+= 841 \times 841 
+= 29^{4}$
 
 - [質因數 維基百科](https://zh.wikipedia.org/zh-tw/%E8%B3%AA%E5%9B%A0%E6%95%B8)
-- [time=Thu, Jul 24, 2025 3:10 AM]
+- [time=Sun, Sep 7, 2025 8:31 AM]
 
 
 #### 哥德巴赫猜想
 
-$32 = 13 + 19$
+$32 
+= 13 + 19$
 
-$200 = 31 + 13^{2} = 37 + 163$
+$200 
+= 31 + 13^{2} 
+= 37 + 163$
 
 - [歌德巴赫猜想 維基百科](https://zh.wikipedia.org/zh-tw/%E5%93%A5%E5%BE%B7%E5%B7%B4%E8%B5%AB%E7%8C%9C%E6%83%B3)
 - [time=Thu, Jun 26, 2025 9:20 AM]
@@ -1197,28 +1285,28 @@ $sin \theta ^ 2 + cos \theta ^ 2 = 1$
 #include <stdlib.h>
 
 int main(){
-    
+    // ...
 }
 ```
 
 - [三角函數 維基百科](https://zh.wikipedia.org/zh-tw/%E4%B8%89%E8%A7%92%E5%87%BD%E6%95%B0)
-- [time=Sun, Jun 29, 2025 10:01 AM]
+- [time=Sat, Jul 26, 2025 1:52 PM]
 
 
-#### Q: 何謂穩固結構
+#### Acknowledge
 
 ```
-What structure would be Solidity ? 
-參考以上圖形，最簡單的起點為三角形，最簡單的回答為多邊形乃至圓形。
+推薦一本書，書名為真確。
 ```
-```
-推薦一本書，
-書名為真確。
-```
-- [time=Sun, Jul 13, 2025 6:52 PM]
 
+* [C語言學習聖經 誠品](https://www.eslite.com/product/10012011762682390517009)
+* [C語言教學手冊 誠品](https://www.eslite.com/product/1001113881689082)
+* [真確 誠品](https://www.eslite.com/product/1001124182687226)
 
-#### Reference 參考資料：
+#### addition 補充：
 
-* [C語言教學手冊 博客來](https://www.books.com.tw/products/0010360466)
-* [真確 - 誠品](https://www.eslite.com/product/1001124182687226)
+* [Javascript 筆記](https://hackmd.io/@EIT-/javascript_)
+* [JAVA 筆記](https://hackmd.io/@EIT-/java_)
+* [SQLite 筆記](https://hackmd.io/@EIT-/sql_)
+* [演算法 (Python) 筆記](https://hackmd.io/@EIT-/python_Mollitutanimreprehenderitdovelitculpexdolorutincididuntidanim)
+* [Math 筆記](https://hackmd.io/@EIT-/cal_)

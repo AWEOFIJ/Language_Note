@@ -8,7 +8,7 @@ title: JAVA 筆記
 `Note` `2025.02.28`
 
  - Start: [time=Wed, May 28, 2025 1:50 PM]
- - Last Update: [time=Fri, Aug 1, 2025 12:06 AM]
+ - Last Update: [time=Tue, Sep 16, 2025 3:37 PM]
 
 ### Gemini 產生範例
 
@@ -113,6 +113,99 @@ swapped = true; // 標記發生了交換
 - [time=Fri, Aug 1, 2025 12:06 AM]
 
 ---
+
+
+### Binary Tree
+
+```java=
+public class BinaryTree {
+
+    // 定義二元樹節點結構
+    static class Node {
+        int data;
+        Node left;
+        Node right;
+
+        Node(int data) {
+            this.data = data;
+            this.left = null;
+            this.right = null;
+        }
+    }
+
+    // 建立新節點
+    static Node createNode(int data) {
+        return new Node(data);
+    }
+
+    // 修改節點資料
+    static void modifyNode(Node node, int newData) {
+        if (node != null) {
+            node.data = newData;
+        }
+    }
+
+    // 前序遍歷：根 → 左 → 右
+    static void preOrderTraversal(Node root) {
+        if (root != null) {
+            System.out.print(root.data + " ");
+            preOrderTraversal(root.left);
+            preOrderTraversal(root.right);
+        }
+    }
+
+    // 中序遍歷：左 → 根 → 右
+    static void inOrderTraversal(Node root) {
+        if (root != null) {
+            inOrderTraversal(root.left);
+            System.out.print(root.data + " ");
+            inOrderTraversal(root.right);
+        }
+    }
+
+    // 後序遍歷：左 → 右 → 根
+    static void postOrderTraversal(Node root) {
+        if (root != null) {
+            postOrderTraversal(root.left);
+            postOrderTraversal(root.right);
+            System.out.print(root.data + " ");
+        }
+    }
+
+    public static void main(String[] args) {
+        // 建立節點並構建樹結構
+        Node root = createNode(0);
+        root.left = createNode(1);
+        root.right = createNode(2);
+        root.left.left = createNode(3);
+        root.left.right = createNode(4);
+        root.right.left = createNode(5);
+        root.right.right = createNode(6);
+        root.left.left.left = createNode(7);
+        root.left.left.right = createNode(8);
+        root.left.right.left = createNode(9);
+
+        System.out.print("Pre-order Traversal: ");
+        preOrderTraversal(root);
+        System.out.println();
+
+        System.out.print("In-order Traversal: ");
+        inOrderTraversal(root);
+        System.out.println();
+
+        System.out.print("Post-order Traversal: ");
+        postOrderTraversal(root);
+        System.out.println();
+    }
+}
+```
+```
+Pre-order Traversal: 0 1 3 7 8 4 9 2 5 6
+In-order Traversal: 7 3 8 1 9 4 0 5 2 6
+Post-order Traversal: 7 8 3 9 4 1 5 6 2 0
+```
+
+- [time=Tue, Sep 16, 2025 3:37 PM]
 
 #### Acknowledge
 
@@ -122,7 +215,7 @@ swapped = true; // 標記發生了交換
 `Note` `2025.02.28`
 
  - Start: [time=Wed, May 28, 2025 1:50 PM]
- - Last Update: [time=Fri, Aug 1, 2025 12:06 AM]
+ - Last Update: [time=Tue, Sep 16, 2025 3:37 PM]
 
 ### Gemini 產生範例
 
@@ -227,6 +320,99 @@ swapped = true; // 標記發生了交換
 - [time=Fri, Aug 1, 2025 12:06 AM]
 
 ---
+
+
+### Binary Tree
+
+```java=
+public class BinaryTree {
+
+    // 定義二元樹節點結構
+    static class Node {
+        int data;
+        Node left;
+        Node right;
+
+        Node(int data) {
+            this.data = data;
+            this.left = null;
+            this.right = null;
+        }
+    }
+
+    // 建立新節點
+    static Node createNode(int data) {
+        return new Node(data);
+    }
+
+    // 修改節點資料
+    static void modifyNode(Node node, int newData) {
+        if (node != null) {
+            node.data = newData;
+        }
+    }
+
+    // 前序遍歷：根 → 左 → 右
+    static void preOrderTraversal(Node root) {
+        if (root != null) {
+            System.out.print(root.data + " ");
+            preOrderTraversal(root.left);
+            preOrderTraversal(root.right);
+        }
+    }
+
+    // 中序遍歷：左 → 根 → 右
+    static void inOrderTraversal(Node root) {
+        if (root != null) {
+            inOrderTraversal(root.left);
+            System.out.print(root.data + " ");
+            inOrderTraversal(root.right);
+        }
+    }
+
+    // 後序遍歷：左 → 右 → 根
+    static void postOrderTraversal(Node root) {
+        if (root != null) {
+            postOrderTraversal(root.left);
+            postOrderTraversal(root.right);
+            System.out.print(root.data + " ");
+        }
+    }
+
+    public static void main(String[] args) {
+        // 建立節點並構建樹結構
+        Node root = createNode(0);
+        root.left = createNode(1);
+        root.right = createNode(2);
+        root.left.left = createNode(3);
+        root.left.right = createNode(4);
+        root.right.left = createNode(5);
+        root.right.right = createNode(6);
+        root.left.left.left = createNode(7);
+        root.left.left.right = createNode(8);
+        root.left.right.left = createNode(9);
+
+        System.out.print("Pre-order Traversal: ");
+        preOrderTraversal(root);
+        System.out.println();
+
+        System.out.print("In-order Traversal: ");
+        inOrderTraversal(root);
+        System.out.println();
+
+        System.out.print("Post-order Traversal: ");
+        postOrderTraversal(root);
+        System.out.println();
+    }
+}
+```
+```
+Pre-order Traversal: 0 1 3 7 8 4 9 2 5 6
+In-order Traversal: 7 3 8 1 9 4 0 5 2 6
+Post-order Traversal: 7 8 3 9 4 1 5 6 2 0
+```
+
+- [time=Tue, Sep 16, 2025 3:37 PM]
 
 #### Acknowledge
 
